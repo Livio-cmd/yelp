@@ -1,0 +1,125 @@
+// import des polices
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-weight: 16px;
+    color: black;
+}
+
+@mixin font($familly, $famillyRescue, $size, $weight, $color, $lineHeight, $spacing){
+    font-family: $familly, $famillyRescue;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    line-height: $lineHeight;
+    letter-spacing: $spacing;
+}
+
+h1 {
+    @include font('Archivo', sans-serif, 56px, 700, #000, 1, -1.5%);
+}
+
+h2 {
+    @include font('Archivo', sans-serif, 48px, inherit, #000, 1, -1.5%);
+}
+
+h3 {
+    @include font('Archivo', sans-serif, 40px, inherit, #000, 1, -1.5%);
+}
+
+h4 {
+    @include font('Archivo', sans-serif, 36px, inherit, #000, 1, -1.5%);
+}
+
+h5 {
+    @include font('Archivo', sans-serif, 32px, inherit, #000, 1, -1.2%);
+}
+
+h6 {
+    @include font('Archivo', sans-serif, 25px, inherit, #000, 1, -1.2%);
+}
+
+p {
+    @include font('Archivo', sans-serif, 16px, inherit, rgba(0, 0, 0, 0.6), 1.6, 0);
+}
+
+a, .button {
+    @include font('Archivo', sans-serif, 17px, inherit, rgba(0, 0, 0, 0.6), 1, 0);
+    border-radius: 4px;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    transition: all 300ms ease, outline 0s;
+    font-weight: 600;
+}
+
+a:hover {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.button {
+    padding: 20px 32px;
+    background-color: #000;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.button:hover {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.065);
+}
+
+input {
+    @include font('Archivo', sans-serif, 16px, inherit, rgba(0, 0, 0, 0.6), 1.6, 0);
+}
+
+.card-title {
+    @include font('Archivo', sans-serif, 17px, 700, #000, 1, -1.2%);
+}
+
+img {
+    display: block;
+    user-select: none;
+}
+
+#logo {
+    width: 150px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+section {
+    width: 94%;
+    max-width: 1550px;
+    margin: 34px auto;
+}
+
+.two-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .side {
+        width: 100%;
+        max-width: 50%;
+    }
+}

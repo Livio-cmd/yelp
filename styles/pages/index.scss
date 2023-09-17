@@ -1,0 +1,85 @@
+@import '../vars';
+
+header {
+
+    .bottom {
+        background-color: $beige;
+        margin-top: 0;
+        padding: 54px 34px;
+        gap: 20px;
+        border-radius: 6px;
+    }
+
+    h3 { font-weight: 700;
+        letter-spacing: -1px !important;
+    }
+
+    .search-row {
+        gap: 20px;
+    }
+
+    .input {
+        padding: 16px 16px;
+        outline: 1px solid rgba(0, 0, 0, 0.065);
+        outline-offset: -1px;
+        width: fit-content;
+        background-color: white;
+
+        input{
+            width: 100%;
+            max-width: 400px;
+            border: none;
+            background-color: white;
+            outline: none;
+        }
+
+        img {
+            width: 20px;
+            margin-right: 12px;
+        }
+    }
+}
+
+main {
+
+    .camp-list {
+        flex-wrap: wrap;
+        gap: 34px;
+    }
+
+    .card {
+        padding: 12px;
+        outline: 1px solid rgba(0, 0, 0, 0.065);
+        border-radius: 4px;
+        gap: 12px;
+        flex-grow: 1;
+        flex-basis: calc(33% - 34px);
+
+        .button {
+            background-color: transparent;
+            color: black;
+            outline: 1px solid rgba(0, 0, 0, 0.065);
+            width: 100%;
+            text-align: center;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.03);
+                outline: 1px solid transparent;
+            }
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+            max-height: 250px;
+
+            img {
+                border-radius: 4px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

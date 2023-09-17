@@ -1,0 +1,92 @@
+@import '../vars';
+body {
+    overflow: hidden;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+
+    section {
+        width: fit-content;
+        border-radius: 4px;
+        background-color: $beige;
+        height: 100%;
+        max-height: 1080px;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .two-side {
+        // transform: scale(0.96);
+
+        // animation: zoom-out 2s ease;
+        // animation-fill-mode: forwards;
+        // animation-delay: 200ms;
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    .list {
+        gap: 8px;
+        .item img{
+            margin-right: 16px;
+        }
+    }
+
+    .bottom {
+        height: 100%;
+        justify-content: center;
+        gap: 54px;
+    }
+
+    .partener {
+        p { margin-bottom: 8px; }
+    }
+
+    .left {
+        padding: 54px 128px;
+    }
+
+    .right {
+
+        width: 45% !important;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius:0 4px 4px 0;
+        }
+    }
+
+    .background {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        filter: blur(10px);
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    main {
+        .bottom {
+            gap: 27px;
+        }
+        .left {
+            padding: 27px 54px;
+        }
+    }
+}
+
+@keyframes zoom-out {
+    to { transform: scale(1); }
+}
